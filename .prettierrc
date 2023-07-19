@@ -1,0 +1,24 @@
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "importOrder": [
+    "(^react|^next)",
+    "(./app|@/app)",
+    "^@mui",
+    "<THIRD_PARTY_MODULES>",
+    "(.|^@)/features/api(?!\\/interface)",
+    "(.|^@)/features(?!\\/interface)",
+    "(.|^@)/hooks(?!\\/interface)",
+    "(.|^@)/(components|views|styled)(?!\\/interface)|\\.\\/[^/]+(?!\\/)",
+    "(.|^@)/(helpers|constants|themes)(?!\\/interface)",
+    "(.|^@)/adapters(?!\\/interface)",
+    "(.|^@)/dti(?!\\/interface)",
+    "(.|^@)/(interface|.*\\/interface)"
+  ],
+  "importOrderSeparation": true,
+  "importOrderCaseInsensitive": true,
+  "importOrderSortSpecifiers": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"]
+}
