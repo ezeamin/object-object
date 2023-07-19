@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* GENERAL ------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex !important;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  padding: 1rem 0 0.5rem 0;
+}
+
+/* TAILWIND -------------------------------------------- */
+
+.paddings {
+  @apply lg:px-60 2xl:px-96;
+}
