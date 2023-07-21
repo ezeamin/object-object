@@ -1,9 +1,9 @@
+import { mockedPosts } from '@/mock';
+
+import PostsGrid from '@/components/Main/PostsGrid';
+
 const Home = () => {
-  return (
-    <main>
-      <h1>Main</h1>
-    </main>
-  );
+  return <PostsGrid posts={mockedPosts} />;
 };
 
 export default Home;
