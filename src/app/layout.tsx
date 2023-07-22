@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { Titillium_Web } from 'next/font/google';
 import Script from 'next/script';
 
-import './globals.css';
+import '@/styles/globals.css';
+
+import NextAuthSessionProvider from './providers/sessionProvider';
 import Footer from '@/components/Common/Footer';
 import Header from '@/components/Common/Header';
 
@@ -30,9 +32,11 @@ export default function RootLayout({
         defer
       />
       <body className={titillium.className}>
-        <Header />
-        <main className="py-8 responsive-paddings mt-16">{children}</main>
-        <Footer />
+        <NextAuthSessionProvider>
+          <Header />
+          <main className="py-8 responsive-paddings mt-16">{children}</main>
+          <Footer />
+        </NextAuthSessionProvider>
       </body>
     </html>
   );
