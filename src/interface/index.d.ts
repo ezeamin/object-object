@@ -29,4 +29,6 @@ export interface PostBasicInfo {
     likes: number;
     comments: number;
   };
+  tags: string[];
+  timeToRead: number;
 }

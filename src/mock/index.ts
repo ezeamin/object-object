@@ -16,6 +16,8 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 100,
       likes: 50,
     },
+    tags: ['mario', 'princess', 'bowser'],
+    timeToRead: 2,
   },
   {
     id: 2,
@@ -31,6 +33,8 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 100,
       likes: 5,
     },
+    tags: ['mario', 'princess', 'bowser'],
+    timeToRead: 5,
   },
   {
     id: 3,
@@ -47,6 +51,8 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 200,
       likes: 70,
     },
+    tags: ['mario', 'princess', 'bowser'],
+    timeToRead: 3,
   },
   {
     id: 4,
@@ -63,6 +69,8 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 50,
       likes: 15,
     },
+    tags: ['mario', 'princess', 'bowser'],
+    timeToRead: 15,
   },
   {
     id: 5,
@@ -79,6 +87,8 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 150,
       likes: 100,
     },
+    tags: ['mario', 'princess', 'bowser'],
+    timeToRead: 5,
   },
   {
     id: 6,
@@ -95,6 +105,8 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 75,
       likes: 30,
     },
+    tags: ['mario', 'princess', 'bowser'],
+    timeToRead: 25,
   },
   {
     id: 7,
@@ -111,5 +123,7 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 300,
       likes: 120,
     },
+    tags: ['mario', 'princess', 'bowser'],
+    timeToRead: 7,
   },
 ];

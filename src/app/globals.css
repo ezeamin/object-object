@@ -13,17 +13,11 @@ body {
   display: flex !important;
   flex-direction: column;
   min-height: 100vh;
-  background: #06beb6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #48b1bf,
-    #06beb6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #48b1bf,
-    #06beb6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: radial-gradient(
+    circle 815px at 26% -15%,
+    rgba(9, 29, 85, 1) 0.2%,
+    rgba(0, 0, 0, 1) 100.2%
+  );
 }
 
 main {

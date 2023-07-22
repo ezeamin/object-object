@@ -31,7 +31,7 @@ export default function RootLayout({
       />
       <body className={titillium.className}>
         <Header />
-        <main className="py-8 responsive-paddings">{children}</main>
+        <main className="py-8 responsive-paddings mt-16">{children}</main>
         <Footer />
       </body>
     </html>

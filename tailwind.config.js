@@ -13,6 +13,9 @@ export const theme = {
       'gradient-conic':
         'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
     },
+    boxShadow: {
+      'center-blue': '0 0 10px 1px rgba(52, 55, 255, 0.2)',
+    },
   },
 };
 export const plugins = [daisyui];
