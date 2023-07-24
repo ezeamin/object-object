@@ -7,7 +7,6 @@ interface Props {
 const SaveButton = (props: Props) => {
   const { id } = props;
 
-  //   TODO: This isn't working because link element gets triggered when clicking
   const handleSave = () => {
     console.log('saved!', id);
   };
