@@ -38,3 +38,7 @@ footer {
 .responsive-paddings {
   @apply px-5 lg:px-40 2xl:px-96;
 }
+
+.custom-card {
+  @apply card bg-base-100 shadow-xl w-full;
+}

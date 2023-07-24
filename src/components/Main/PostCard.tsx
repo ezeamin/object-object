@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import AuthorName from '../Common/AuthorName';
 import TagList from '../Common/TagList';
 import SaveButton from './SaveButton';
 
@@ -20,31 +21,22 @@ const PostCard = (props: Props) => {
 
   if (index === 0) {
     return (
-      <div className="post-card card md:col-span-2 bg-base-100 shadow-xl image-full w-full h-72 hover:shadow-center-blue hover:border-white/20 transition-all duration-300">
+      <div className="custom-card md:col-span-2 image-full h-72 border-transparent hover:shadow-center-blue hover:border hover:border-white/20 transition-all duration-300">
         <figure>
           <Image
             src={post.mainImageUrl}
             alt={post.title}
             width={800}
             height={300}
-            className="w-full h-d-full object-cover"
+            className="w-full h-full object-cover"
           />
         </figure>
         <div className="relative z-20 p-5 pb-3 w-full flex flex-col justify-end items-center">
-          <Link href="/" className="w-full">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <figure>
-                <Image
-                  src={post.author.avatarUrl}
-                  alt={post.author.name}
-                  width={20}
-                  height={20}
-                  className="rounded-full"
-                  priority
-                />
-              </figure>
-              <p>{post.author.name}</p>
-            </div>
+          <Link href={`/post/${post.slug}`} className="w-full">
+            <AuthorName
+              author={post.author}
+              className="items-center justify-center"
+            />
             <h2 className="text-3xl font-bold text-center">{post.title}</h2>
             <div className="flex justify-center">
               <TagList tags={post.tags} />
@@ -76,23 +68,15 @@ const PostCard = (props: Props) => {
   }
 
   return (
-    <div className="post-card card bg-base-100 shadow-xl w-full border border-white/10 hover:shadow-center-blue hover:border-white/20 transition-all duration-300">
+    <div className="custom-card hover:shadow-center-blue border-transparent hover:border hover:border-white/20 transition-all duration-300">
       <div className="card-body p-5 pb-4">
         <section className="flex flex-col justify-between">
-          <Link href="/" className="w-full pb-9">
+          <Link href={`/post/${post.slug}`} className="w-full pb-9">
             <div className="flex justify-between items-center w-full mb-2">
-              <div className="flex items-center justify-center gap-2 ">
-                <figure>
-                  <Image
-                    src={post.author.avatarUrl}
-                    alt={post.author.name}
-                    width={20}
-                    height={20}
-                    className="rounded-full"
-                  />
-                </figure>
-                <p>{post.author.name}</p>
-              </div>
+              <AuthorName
+                author={post.author}
+                className="items-center justify-center"
+              />
               <p className="text-right">{`${emoji} ${post.timeToRead} min read`}</p>
             </div>
             <h2 className="text-2xl font-bold">{post.title}</h2>

@@ -1,23 +1,31 @@
 export interface Post {
   id: number;
   title: string;
+  slug: string;
   content: string;
   mainImageUrl: string;
   createdAt: Date;
-  updatedAt: Date;
-  deletedAt: Date;
+  updatedAt: Date | null;
+  deletedAt: Date | null;
   categoryId: number;
   user: User;
   stats: Stats;
+  tags: string[];
 }
 
-export interface User {}
+// CHANGE THIS
+export interface User {
+  authorId: number;
+  name: string;
+  avatarUrl: string;
+}
 
 export interface Stats {}
 
 export interface PostBasicInfo {
   id: number;
   title: string;
+  slug: string;
   mainImageUrl: string;
   author: {
     authorId: number;
