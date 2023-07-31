@@ -21,7 +21,7 @@ const PostCard = (props: Props) => {
 
   if (index === 0) {
     return (
-      <div className="custom-card md:col-span-2 image-full h-72 border-transparent hover:shadow-center-blue hover:border hover:border-white/20 transition-all duration-300">
+      <div className="custom-card md:col-span-2 image-full h-72 border border-transparent hover:shadow-center-blue hover:border hover:border-white/20 transition-all duration-300">
         <figure>
           <Image
             src={post.mainImageUrl}
@@ -68,7 +68,7 @@ const PostCard = (props: Props) => {
   }
 
   return (
-    <div className="custom-card hover:shadow-center-blue border-transparent hover:border hover:border-white/20 transition-all duration-300">
+    <div className="custom-card hover:shadow-center-blue border border-transparent hover:border hover:border-white/20 transition-all duration-300">
       <div className="card-body p-5 pb-4">
         <section className="flex flex-col justify-between">
           <Link href={`/post/${post.slug}`} className="w-full pb-9">

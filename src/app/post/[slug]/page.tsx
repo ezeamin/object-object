@@ -5,6 +5,8 @@ import matter from 'gray-matter';
 import PostContent from '@/components/Viewer/PostContent';
 import ViewerAside from '@/components/Viewer/ViewerAside';
 
+import '@/styles/viewer.css';
+
 // export const generateStaticParams = async () => {
 //   const posts = await fetch('https://.../posts').then((res) => res.json());
 //   return posts.map((post) => ({

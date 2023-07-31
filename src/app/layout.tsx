@@ -1,17 +1,11 @@
 import type { Metadata } from 'next';
-import { Titillium_Web } from 'next/font/google';
 import Script from 'next/script';
-
-import '@/styles/globals.css';
 
 import Footer from '@/components/Common/Footer';
 import Header from '@/components/Common/Header';
 
-const titillium = Titillium_Web({
-  weight: '400',
-  style: 'normal',
-  subsets: ['latin'],
-});
+import { titillium } from '@/styles/fonts';
+import '@/styles/globals.css';
 
 export const metadata: Metadata = {
   title: '[object Object]',
