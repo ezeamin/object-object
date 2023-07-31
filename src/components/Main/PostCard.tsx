@@ -5,10 +5,10 @@ import AuthorName from '../Common/AuthorName';
 import TagList from '../Common/TagList';
 import SaveButton from './SaveButton';
 
-import { PostBasicInfo } from '@/interface';
+import { Post } from '@/interface';
 
 interface Props {
-  post: PostBasicInfo;
+  post: Post;
   index: number;
 }
 

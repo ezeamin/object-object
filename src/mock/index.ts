@@ -1,6 +1,9 @@
-import { Post, PostBasicInfo } from '@/interface';
+import {
+  /* Post, */
+  Post,
+} from '@/interface';
 
-export const mockedPosts: PostBasicInfo[] = [
+export const mockedPosts: Post[] = [
   {
     id: 1,
     title: 'Mario runs after Princess, again...',
@@ -19,11 +22,14 @@ export const mockedPosts: PostBasicInfo[] = [
     },
     tags: ['mario', 'princess', 'bowser'],
     timeToRead: 2,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 2,
-    title: 'Post 2',
-    slug: 'post-2',
+    title: 'Retro games with Pico 8',
+    slug: 'retro-games-with-pico-8',
     mainImageUrl: '',
     author: {
       authorId: 1,
@@ -35,13 +41,16 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 100,
       likes: 5,
     },
-    tags: ['mario', 'princess', 'bowser'],
+    tags: ['retro', 'games'],
     timeToRead: 5,
+    createdAt: new Date(2021, 5, 15),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 3,
-    title: 'A new adventure awaits our hero!',
-    slug: 'a-new-adventure-awaits-our-hero',
+    title: 'GPT-3 Generated Poetry',
+    slug: 'gpt-3-generated-poetry',
     mainImageUrl:
       'https://cdn.mos.cms.futurecdn.net/VSy6kJDNq2pSXsCzb6cvYF.jpg',
     author: {
@@ -54,15 +63,18 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 200,
       likes: 70,
     },
-    tags: ['mario', 'princess', 'bowser'],
+    tags: ['GPT', 'IA'],
     timeToRead: 3,
+    createdAt: new Date(2020, 11, 3),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 4,
-    title: 'The Enigma of the Lost City',
-    slug: 'the-enigma-of-the-lost-city',
+    title: 'AWS Quickstart',
+    slug: 'aws-quickstart',
     mainImageUrl:
-      'https://cdn.mos.cms.futurecdn.net/6t8Zh249QiFmVnkQdCCtHK.jpg',
+      'https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png',
     author: {
       authorId: 3,
       avatarUrl: 'https://picsum.photos/200',
@@ -73,8 +85,11 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 50,
       likes: 15,
     },
-    tags: ['mario', 'princess', 'bowser'],
+    tags: ['server', 'amazon', 'cloud', 'aws'],
     timeToRead: 15,
+    createdAt: new Date(2019, 1, 1),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 5,
@@ -94,6 +109,9 @@ export const mockedPosts: PostBasicInfo[] = [
     },
     tags: ['mario', 'princess', 'bowser'],
     timeToRead: 5,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 6,
@@ -113,6 +131,9 @@ export const mockedPosts: PostBasicInfo[] = [
     },
     tags: ['mario', 'princess', 'bowser'],
     timeToRead: 25,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 7,
@@ -132,9 +153,35 @@ export const mockedPosts: PostBasicInfo[] = [
     },
     tags: ['mario', 'princess', 'bowser'],
     timeToRead: 7,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
+  },
+  {
+    id: 8,
+    title: 'Re-resizable library',
+    slug: 're-resizable',
+    mainImageUrl:
+      'https://github.com/bokuweb/re-resizable/blob/master/logo.png?raw=true',
+    author: {
+      authorId: 7,
+      avatarUrl: 'https://picsum.photos/200',
+      name: 'moklick',
+    },
+    stats: {
+      comments: 25,
+      views: 300,
+      likes: 120,
+    },
+    tags: ['react', 'library', 'resizable'],
+    timeToRead: 7,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
   },
 ];
 
+/*
 export const mockedPost: Post = {
   id: 1,
   title: 'Mario runs after Princess, again...',
@@ -146,7 +193,7 @@ export const mockedPost: Post = {
   updatedAt: null,
   deletedAt: null,
   categoryId: 1,
-  user: {
+  author: {
     authorId: 1,
     avatarUrl: 'https://picsum.photos/200',
     name: 'John Doe',
@@ -158,3 +205,4 @@ export const mockedPost: Post = {
   },
   tags: ['mario', 'princess', 'bowser'],
 };
+*/

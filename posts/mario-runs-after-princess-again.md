@@ -4,7 +4,7 @@ subtitle: 'A tribute to the timeless adventures of Mario and the charm of the Mu
 date: '2023-07-24'
 ---
 
-# 🙄 Mario Runs After Princess, Again...
+## 🙄 Mario Runs After Princess, Again...
 
 It was just another day in the Mushroom Kingdom, and as expected, trouble was brewing yet again. Princess Peach had been kidnapped by Bowser, the infamous villain, and Mario, the brave plumber-turned-hero, had to spring into action to save her once more.
 
@@ -59,6 +59,8 @@ Amidst the joyous celebration, Mario took a moment to reflect. He knew that no m
 As the sun set on another eventful day in the Mushroom Kingdom, Mario couldn't help but wonder when the next adventure would call. He knew that peace in the kingdom was a fleeting dream, but he was ready to face whatever came his way.
 
 And so, Mario's journey continues, for in a world filled with love, bravery, and friendship, the hero in the red cap will forever run after the princess he holds dear.
+
+Visit [this](https://www.mariowiki.com/Mario) website to learn more about Mario and his adventures.
 
 ![Mario and Princess Peach](https://img.asmedia.epimg.net/resizer/f8eJbAu4Dsssp8g8oqv1k4doMzk=/1472x828/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/OK436Y2M6VH7HOZWEJCZU3J2VI.png)
 

@@ -1,9 +1,9 @@
 import PostCard from './PostCard';
 
-import { PostBasicInfo } from '@/interface';
+import { Post } from '@/interface';
 
 interface Props {
-  posts: PostBasicInfo[];
+  posts: Post[];
 }
 
 const PostsGrid = (props: Props) => {

@@ -1,17 +1,17 @@
-export interface Post {
-  id: number;
-  title: string;
-  slug: string;
-  content: string;
-  mainImageUrl: string;
-  createdAt: Date;
-  updatedAt: Date | null;
-  deletedAt: Date | null;
-  categoryId: number;
-  user: User;
-  stats: Stats;
-  tags: string[];
-}
+// export interface Post {
+//   id: number;
+//   title: string;
+//   slug: string;
+//   content: string;
+//   mainImageUrl: string;
+//   createdAt: Date;
+//   updatedAt: Date | null;
+//   deletedAt: Date | null;
+//   categoryId: number;
+//   author: User;
+//   stats: Stats;
+//   tags: string[];
+// }
 
 // CHANGE THIS
 export interface User {
@@ -20,23 +20,22 @@ export interface User {
   avatarUrl: string;
 }
 
-export interface Stats {}
+export interface Stats {
+  views: number;
+  likes: number;
+  comments: number;
+}
 
-export interface PostBasicInfo {
+export interface Post {
   id: number;
   title: string;
   slug: string;
   mainImageUrl: string;
-  author: {
-    authorId: number;
-    name: string;
-    avatarUrl: string;
-  };
-  stats: {
-    views: number;
-    likes: number;
-    comments: number;
-  };
+  author: User;
+  stats: Stats;
   tags: string[];
   timeToRead: number;
+  createdAt: Date;
+  updatedAt: Date | null;
+  deletedAt: Date | null;
 }

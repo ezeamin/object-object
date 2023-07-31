@@ -14,19 +14,38 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-image: radial-gradient(
-    circle 815px at 26% -15%,
+    circle 815px at 26% 0%,
     rgba(9, 29, 85, 1) 0.2%,
-    rgba(0, 0, 0, 1) 100.2%
+    rgba(0, 0, 0, 1) 100%
   );
 }
 
 main {
   flex: 1 0 auto;
+  scroll-margin-top: 64px;
 }
 
 footer {
   flex-shrink: 0;
   padding: 1rem 0 0.5rem 0;
+}
+
+/* GLOBAL COMPONENTS ----------------------------------- */
+
+.up-button {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #8a8d92;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  scroll-margin-top: 64px;
 }
 
 /* TAILWIND -------------------------------------------- */

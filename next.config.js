@@ -5,6 +5,8 @@ const nextConfig = {
       'cdn.hobbyconsolas.com',
       'picsum.photos',
       'cdn.mos.cms.futurecdn.net',
+      'a0.awsstatic.com',
+      'github.com',
     ],
   },
 };

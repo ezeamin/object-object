@@ -1,4 +1,4 @@
-import { mockedPost } from '@/mock';
+import { mockedPosts } from '@/mock';
 import fs from 'fs';
 import matter from 'gray-matter';
 
@@ -25,7 +25,10 @@ const getPostContent = (slug: string) => {
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, 'utf8');
   const matterResult = matter(content);
-  return matterResult;
+
+  const data = mockedPosts.find((post) => post.slug === slug)!;
+
+  return { post: matterResult, postMetadata: data };
 };
 
 const PostPage = (props: Props) => {
@@ -33,14 +36,13 @@ const PostPage = (props: Props) => {
     params: { slug },
   } = props;
 
-  const post = getPostContent(slug);
-  const postMetadata = mockedPost;
+  const { post, postMetadata } = getPostContent(slug);
 
   return (
-    <div className="grid grid-cols-12 w-full gap-3">
+    <section className="paddings grid grid-cols-12 w-full gap-3">
       <PostContent post={post} postMetadata={postMetadata} />
       <ViewerAside />
-    </div>
+    </section>
   );
 };
 export default PostPage;

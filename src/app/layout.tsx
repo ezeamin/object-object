@@ -3,6 +3,7 @@ import Script from 'next/script';
 
 import Footer from '@/components/Common/Footer';
 import Header from '@/components/Common/Header';
+import UpButton from '@/components/Common/UpButton';
 
 import { titillium } from '@/styles/fonts';
 import '@/styles/globals.css';
@@ -26,8 +27,12 @@ export default function RootLayout({
       />
       <body className={titillium.className}>
         <Header />
-        <main className="py-8 responsive-paddings mt-16">{children}</main>
+        <main id="main" className="md:pt-6 pb-8 mt-16">
+          {children}
+        </main>
         <Footer />
+
+        <UpButton />
       </body>
     </html>
   );
