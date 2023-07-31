@@ -39,7 +39,7 @@ const PostContent = (props: Props) => {
           className="main-image"
         />
       )}
-      <div className="p-5 md:p-10">
+      <div className="p-5 md:p-10 pb-0 md:pb-0">
         <div className="mb-4">
           <AuthorName
             author={postMetadata.author}
