@@ -55,7 +55,7 @@ const PostContent = (props: Props) => {
         <TagList tags={postMetadata.tags} />
       </div>
 
-      <article className="post-content p-5 md:p-10 pt-0 pb-5">
+      <article className="post-content p-5 md:p-10 pt-5 pb-5">
         <Markdown
           options={{
             overrides: {

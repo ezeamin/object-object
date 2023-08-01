@@ -38,10 +38,10 @@ const PostCard = (props: Props) => {
               className="items-center justify-center"
             />
             <h2 className="text-3xl font-bold text-center">{post.title}</h2>
-            <div className="flex justify-center">
-              <TagList tags={post.tags} />
-            </div>
           </Link>
+          <div className="flex justify-center">
+            <TagList tags={post.tags} />
+          </div>
           <section className="flex flex-col md:flex-row items-center justify-between w-full mt-5">
             <div className="flex flex-grow basis-0">
               <SaveButton id={post.id} />
@@ -71,7 +71,7 @@ const PostCard = (props: Props) => {
     <div className="custom-card hover:shadow-center-blue border border-transparent hover:border hover:border-white/20 transition-all duration-300">
       <div className="card-body p-5 pb-4">
         <section className="flex flex-col justify-between">
-          <Link href={`/post/${post.slug}`} className="w-full pb-9">
+          <Link href={`/post/${post.slug}`} className="w-full">
             <div className="flex justify-between items-center w-full mb-2">
               <AuthorName
                 author={post.author}
@@ -80,9 +80,9 @@ const PostCard = (props: Props) => {
               <p className="text-right">{`${emoji} ${post.timeToRead} min read`}</p>
             </div>
             <h2 className="text-2xl font-bold">{post.title}</h2>
-            <TagList tags={post.tags} />
           </Link>
-          <section className="flex items-center justify-between w-full mt-1">
+          <TagList tags={post.tags} />
+          <section className="flex items-center justify-between w-full mt-1 pt-9">
             <div>
               <SaveButton id={post.id} />
             </div>

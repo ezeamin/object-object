@@ -140,7 +140,7 @@ export const mockedPosts: Post[] = [
     title: 'Cooking Masterclass: The Art of Flavor',
     slug: 'cooking-masterclass-the-art-of-flavor',
     mainImageUrl:
-      'https://cdn.mos.cms.futurecdn.net/000b49dd3c91b2e6123b537de0cd3158.jpg',
+      'https://esmmweighless.com/wp-content/uploads/2019/12/Carolyn-Cooking-Blog.jpg',
     author: {
       authorId: 6,
       avatarUrl: 'https://picsum.photos/200',
@@ -151,7 +151,7 @@ export const mockedPosts: Post[] = [
       views: 300,
       likes: 120,
     },
-    tags: ['mario', 'princess', 'bowser'],
+    tags: ['cooking', 'food'],
     timeToRead: 7,
     createdAt: new Date(),
     updatedAt: null,

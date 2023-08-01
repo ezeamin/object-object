@@ -7,6 +7,7 @@ const nextConfig = {
       'cdn.mos.cms.futurecdn.net',
       'a0.awsstatic.com',
       'github.com',
+      'esmmweighless.com',
     ],
   },
 };

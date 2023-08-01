@@ -26,7 +26,7 @@
 
 [![Edit xp9p7272m4](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/xp9p7272m4)  
 [CodeSandbox](https://codesandbox.io/s/xp9p7272m4)  
-[CodeSandbox(TypeScript)](https://codesandbox.io/s/1vwo2p4l64)   
+[CodeSandbox(TypeScript)](https://codesandbox.io/s/1vwo2p4l64)  
 [CodeSandbox(With hooks)](https://codesandbox.io/s/blissful-joliot-d3unx)
 
 ## Install
@@ -49,7 +49,7 @@ import { Resizable } from 're-resizable';
   }}
 >
   Sample with default size
-</Resizable>
+</Resizable>;
 ```
 
 ### Example with `size`
@@ -69,7 +69,7 @@ import { Resizable } from 're-resizable';
   }}
 >
   Sample with size
-</Resizable>
+</Resizable>;
 ```
 
 ## Props
@@ -253,7 +253,7 @@ Calls when resizable component resize stop.
 
 ## Instance API
 
-#### * `updateSize(size: { width: number | string, height: number | string }): void`
+#### \* `updateSize(size: { width: number | string, height: number | string }): void`
 
 Update component size.
 
@@ -263,7 +263,6 @@ Update component size.
 
 ```javascript
 class YourComponent extends Component {
-
   // ...
 
   update() {
@@ -272,7 +271,11 @@ class YourComponent extends Component {
 
   render() {
     return (
-      <Resizable ref={c => { this.resizable = c; }}>
+      <Resizable
+        ref={(c) => {
+          this.resizable = c;
+        }}
+      >
         example
       </Resizable>
     );
@@ -290,7 +293,7 @@ If you have a bug to report, please reproduce the bug in [CodeSandbox](https://c
 
 ## Test
 
-``` sh
+```sh
 npm test
 ```
 
