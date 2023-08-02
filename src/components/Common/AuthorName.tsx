@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-import { User } from '@/interface';
+import { Author } from '@/interface';
 
 interface Props {
-  author: User;
+  author: Author;
   className?: string;
   textClassName?: string;
   size?: 'small' | 'large';
@@ -27,7 +27,7 @@ const AuthorName = (props: Props) => {
           alt={author.name}
           width={size === 'small' ? 20 : 40}
           height={size === 'small' ? 20 : 40}
-          className="rounded-full"
+          className="rounded-avatar"
           priority
         />
       </figure>

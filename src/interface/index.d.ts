@@ -14,7 +14,7 @@
 // }
 
 // CHANGE THIS
-export interface User {
+export interface Author {
   authorId: number;
   name: string;
   avatarUrl: string;
@@ -31,11 +31,25 @@ export interface Post {
   title: string;
   slug: string;
   mainImageUrl: string;
-  author: User;
+  author: Author;
   stats: Stats;
   tags: string[];
   timeToRead: number;
   createdAt: Date;
   updatedAt: Date | null;
   deletedAt: Date | null;
+}
+
+export interface User {
+  id: number;
+  name: string;
+  avatarUrl: string;
+  email: string;
+  description: string;
+  posts: Post[];
+  location: string;
+  createdAt: Date;
+  updatedAt: Date | null;
+  deletedAt: Date | null;
+  username: string;
 }

@@ -1,6 +1,7 @@
 import {
   /* Post, */
   Post,
+  User,
 } from '@/interface';
 
 export const mockedPosts: Post[] = [
@@ -181,28 +182,61 @@ export const mockedPosts: Post[] = [
   },
 ];
 
-/*
-export const mockedPost: Post = {
+export const mockedUser: User = {
   id: 1,
-  title: 'Mario runs after Princess, again...',
-  slug: 'mario-runs-after-princess-again',
-  content: '',
-  mainImageUrl:
-    'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/11/super-mario-bros-pelicula-2887174.jpg',
+  name: 'John Doe',
+  avatarUrl: 'https://picsum.photos/200',
+  email: 'john@gmail.com',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  posts: [
+    {
+      id: 1,
+      title: 'Mario runs after Princess, again...',
+      slug: 'mario-runs-after-princess-again',
+      mainImageUrl:
+        'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/11/super-mario-bros-pelicula-2887174.jpg',
+      author: {
+        authorId: 1,
+        avatarUrl: 'https://picsum.photos/200',
+        name: 'John Doe',
+      },
+      stats: {
+        comments: 10,
+        views: 100,
+        likes: 50,
+      },
+      tags: ['mario', 'princess', 'bowser'],
+      timeToRead: 2,
+      createdAt: new Date(),
+      updatedAt: null,
+      deletedAt: null,
+    },
+    {
+      id: 8,
+      title: 'Re-resizable library',
+      slug: 're-resizable',
+      mainImageUrl:
+        'https://github.com/bokuweb/re-resizable/blob/master/logo.png?raw=true',
+      author: {
+        authorId: 7,
+        avatarUrl: 'https://picsum.photos/200',
+        name: 'moklick',
+      },
+      stats: {
+        comments: 25,
+        views: 300,
+        likes: 120,
+      },
+      tags: ['react', 'library', 'resizable'],
+      timeToRead: 7,
+      createdAt: new Date(),
+      updatedAt: null,
+      deletedAt: null,
+    },
+  ],
+  location: 'New York, USA',
   createdAt: new Date(),
   updatedAt: null,
   deletedAt: null,
-  categoryId: 1,
-  author: {
-    authorId: 1,
-    avatarUrl: 'https://picsum.photos/200',
-    name: 'John Doe',
-  },
-  stats: {
-    comments: 10,
-    views: 100,
-    likes: 50,
-  },
-  tags: ['mario', 'princess', 'bowser'],
+  username: 'johndoe',
 };
-*/

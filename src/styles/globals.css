@@ -48,6 +48,31 @@ footer {
   scroll-margin-top: 64px;
 }
 
+/* UTILITY CLASSES ------------------------------------- */
+
+.rounded-avatar {
+  border-radius: 33% 67% 55% 45% / 30% 47% 53% 70% !important;
+}
+
+.custom-link {
+  text-decoration: underline;
+  color: rgb(106, 221, 230);
+  transition: color 0.1s ease;
+}
+
+.custom-link:hover {
+  color: rgb(86, 182, 189);
+}
+
+.custom-link-no-underline {
+  text-decoration: none !important;
+}
+
+.stick-to-top {
+  position: sticky !important;
+  top: 75px;
+}
+
 /* TAILWIND -------------------------------------------- */
 
 .paddings {

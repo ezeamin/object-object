@@ -42,9 +42,9 @@ To register or learn more, visit our website at [www.cookingmasterclass.com](htt
 
 Let the culinary adventure begin!
 
-___
+---
 
-*Note: Images used in this blog post are for illustrative purposes only.*
+_Note: Images used in this blog post are for illustrative purposes only._
 
 **About the Author:**
 Jane Doe is a seasoned chef with over 15 years of experience in the culinary world. She is passionate about exploring the art of flavor and loves sharing her knowledge with fellow food enthusiasts.

@@ -41,7 +41,10 @@ const PostPage = (props: Props) => {
   return (
     <section className="paddings grid grid-cols-12 w-full gap-3">
       <PostContent post={post} postMetadata={postMetadata} />
-      <ViewerAside />
+      <ViewerAside
+        authorId={postMetadata.author.authorId}
+        postId={postMetadata.id}
+      />
     </section>
   );
 };
