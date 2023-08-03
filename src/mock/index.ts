@@ -1,9 +1,14 @@
-import { PostBasicInfo } from '@/interface';
+import {
+  /* Post, */
+  Post,
+  User,
+} from '@/interface';
 
-export const mockedPosts: PostBasicInfo[] = [
+export const mockedPosts: Post[] = [
   {
     id: 1,
     title: 'Mario runs after Princess, again...',
+    slug: 'mario-runs-after-princess-again',
     mainImageUrl:
       'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/11/super-mario-bros-pelicula-2887174.jpg',
     author: {
@@ -18,10 +23,14 @@ export const mockedPosts: PostBasicInfo[] = [
     },
     tags: ['mario', 'princess', 'bowser'],
     timeToRead: 2,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 2,
-    title: 'Post 2',
+    title: 'Retro games with Pico 8',
+    slug: 'retro-games-with-pico-8',
     mainImageUrl: '',
     author: {
       authorId: 1,
@@ -33,12 +42,16 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 100,
       likes: 5,
     },
-    tags: ['mario', 'princess', 'bowser'],
+    tags: ['retro', 'games'],
     timeToRead: 5,
+    createdAt: new Date(2021, 5, 15),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 3,
-    title: 'A new adventure awaits our hero!',
+    title: 'GPT-3 Generated Poetry',
+    slug: 'gpt-3-generated-poetry',
     mainImageUrl:
       'https://cdn.mos.cms.futurecdn.net/VSy6kJDNq2pSXsCzb6cvYF.jpg',
     author: {
@@ -51,14 +64,18 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 200,
       likes: 70,
     },
-    tags: ['mario', 'princess', 'bowser'],
+    tags: ['GPT', 'IA'],
     timeToRead: 3,
+    createdAt: new Date(2020, 11, 3),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 4,
-    title: 'The Enigma of the Lost City',
+    title: 'AWS Quickstart',
+    slug: 'aws-quickstart',
     mainImageUrl:
-      'https://cdn.mos.cms.futurecdn.net/6t8Zh249QiFmVnkQdCCtHK.jpg',
+      'https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png',
     author: {
       authorId: 3,
       avatarUrl: 'https://picsum.photos/200',
@@ -69,12 +86,16 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 50,
       likes: 15,
     },
-    tags: ['mario', 'princess', 'bowser'],
+    tags: ['server', 'amazon', 'cloud', 'aws'],
     timeToRead: 15,
+    createdAt: new Date(2019, 1, 1),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 5,
     title: 'The Science of Tomorrow',
+    slug: 'the-science-of-tomorrow',
     mainImageUrl:
       'https://cdn.mos.cms.futurecdn.net/000b8723c68322d3eb871f467e4c23ce.jpg',
     author: {
@@ -89,10 +110,14 @@ export const mockedPosts: PostBasicInfo[] = [
     },
     tags: ['mario', 'princess', 'bowser'],
     timeToRead: 5,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 6,
     title: 'The Galaxy Awaits: A Space Odyssey',
+    slug: 'the-galaxy-awaits-a-space-odyssey',
     mainImageUrl:
       'https://cdn.mos.cms.futurecdn.net/0000e0bf314c7e9a56b21501f5a1e1db.jpg',
     author: {
@@ -107,12 +132,16 @@ export const mockedPosts: PostBasicInfo[] = [
     },
     tags: ['mario', 'princess', 'bowser'],
     timeToRead: 25,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
   },
   {
     id: 7,
     title: 'Cooking Masterclass: The Art of Flavor',
+    slug: 'cooking-masterclass-the-art-of-flavor',
     mainImageUrl:
-      'https://cdn.mos.cms.futurecdn.net/000b49dd3c91b2e6123b537de0cd3158.jpg',
+      'https://esmmweighless.com/wp-content/uploads/2019/12/Carolyn-Cooking-Blog.jpg',
     author: {
       authorId: 6,
       avatarUrl: 'https://picsum.photos/200',
@@ -123,7 +152,91 @@ export const mockedPosts: PostBasicInfo[] = [
       views: 300,
       likes: 120,
     },
-    tags: ['mario', 'princess', 'bowser'],
+    tags: ['cooking', 'food'],
     timeToRead: 7,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
+  },
+  {
+    id: 8,
+    title: 'Re-resizable library',
+    slug: 're-resizable',
+    mainImageUrl:
+      'https://github.com/bokuweb/re-resizable/blob/master/logo.png?raw=true',
+    author: {
+      authorId: 7,
+      avatarUrl: 'https://picsum.photos/200',
+      name: 'moklick',
+    },
+    stats: {
+      comments: 25,
+      views: 300,
+      likes: 120,
+    },
+    tags: ['react', 'library', 'resizable'],
+    timeToRead: 7,
+    createdAt: new Date(),
+    updatedAt: null,
+    deletedAt: null,
   },
 ];
+
+export const mockedUser: User = {
+  id: 1,
+  name: 'John Doe',
+  avatarUrl: 'https://picsum.photos/200',
+  email: 'john@gmail.com',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  posts: [
+    {
+      id: 1,
+      title: 'Mario runs after Princess, again...',
+      slug: 'mario-runs-after-princess-again',
+      mainImageUrl:
+        'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2022/11/super-mario-bros-pelicula-2887174.jpg',
+      author: {
+        authorId: 1,
+        avatarUrl: 'https://picsum.photos/200',
+        name: 'John Doe',
+      },
+      stats: {
+        comments: 10,
+        views: 100,
+        likes: 50,
+      },
+      tags: ['mario', 'princess', 'bowser'],
+      timeToRead: 2,
+      createdAt: new Date(),
+      updatedAt: null,
+      deletedAt: null,
+    },
+    {
+      id: 8,
+      title: 'Re-resizable library',
+      slug: 're-resizable',
+      mainImageUrl:
+        'https://github.com/bokuweb/re-resizable/blob/master/logo.png?raw=true',
+      author: {
+        authorId: 7,
+        avatarUrl: 'https://picsum.photos/200',
+        name: 'moklick',
+      },
+      stats: {
+        comments: 25,
+        views: 300,
+        likes: 120,
+      },
+      tags: ['react', 'library', 'resizable'],
+      timeToRead: 7,
+      createdAt: new Date(),
+      updatedAt: null,
+      deletedAt: null,
+    },
+  ],
+  location: 'New York, USA',
+  createdAt: new Date(),
+  updatedAt: null,
+  deletedAt: null,
+  username: 'johndoe',
+};

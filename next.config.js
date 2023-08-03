@@ -6,6 +6,9 @@ const nextConfig = {
       'picsum.photos',
       'cdn.mos.cms.futurecdn.net',
       'avatars.githubusercontent.com',
+      'a0.awsstatic.com',
+      'github.com',
+      'esmmweighless.com',
     ],
   },
 };

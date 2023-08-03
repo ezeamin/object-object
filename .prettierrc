@@ -15,7 +15,8 @@
     "(.|^@)/(helpers|constants|themes)(?!\\/interface)",
     "(.|^@)/adapters(?!\\/interface)",
     "(.|^@)/dti(?!\\/interface)",
-    "(.|^@)/(interface|.*\\/interface)"
+    "(.|^@)/(interface|.*\\/interface)",
+    "(.|^@)/(styles|.*\\/styles)"
   ],
   "importOrderSeparation": true,
   "importOrderCaseInsensitive": true,
