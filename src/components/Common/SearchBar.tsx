@@ -30,7 +30,7 @@ const SearchBar = () => {
         className="input input-bordered w-24 md:w-auto"
       />
       <button
-        className="btn btn-ghost border border-gray-500"
+        className="btn btn-outline"
         type="submit"
         style={{ width: '48px' }}
       >

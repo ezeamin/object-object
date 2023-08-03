@@ -49,7 +49,7 @@ const PostContent = (props: Props) => {
             <p className="text-sm">Published on {formattedDate}</p>
           </AuthorName>
         </div>
-        <h1 className={`my-2 main-title ${lilita.className}`}>
+        <h1 className={`my-2 title ${lilita.className}`}>
           {postMetadata.title}
         </h1>
         <TagList tags={postMetadata.tags} />

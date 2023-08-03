@@ -73,6 +73,12 @@ footer {
   top: 75px;
 }
 
+.title {
+  text-wrap: balance;
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
 /* TAILWIND -------------------------------------------- */
 
 .paddings {

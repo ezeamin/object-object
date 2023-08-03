@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
-import NextAuthSessionProvider from './providers/sessionProvider';
+import NextAuthSessionProvider from '../providers/sessionProvider';
 import Footer from '@/components/Common/Footer';
 import Header from '@/components/Common/Header';
 import UpButton from '@/components/Common/UpButton';

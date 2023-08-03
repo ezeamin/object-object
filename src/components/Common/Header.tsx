@@ -31,16 +31,15 @@ const Header = async () => {
           <i className="fa-solid fa-plus" />
         </Link>
         {isLoggedIn && session.user?.image && session.user?.name ? (
-          <div className="dropdown dropdown-end">
-            <button type="button" className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <Image
-                  src={session.user?.image}
-                  alt={session.user?.name}
-                  width={50}
-                  height={50}
-                />
-              </div>
+          <div className="dropdown dropdown-end flex">
+            <button type="button" className="btn btn-circle">
+              <Image
+                src={session.user?.image}
+                alt={session.user?.name}
+                width={48}
+                height={48}
+                className="rounded-full"
+              />
             </button>
 
             <ProfileMenu username={session.user.name} />
