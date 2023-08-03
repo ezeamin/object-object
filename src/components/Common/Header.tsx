@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { authOptions } from '@/utils/authOptions';
 
 import ProfileMenu from './ProfileMenu';
+import SearchBar from './SearchBar';
 
 const Header = async () => {
   const session = await getServerSession(authOptions);
@@ -21,13 +22,14 @@ const Header = async () => {
         </Link>
       </div>
       <div className="flex-none gap-2">
-        <div className="form-control">
-          <input
-            type="text"
-            placeholder="Search"
-            className="input input-bordered w-24 md:w-auto"
-          />
-        </div>
+        <SearchBar />
+        <Link
+          href={isLoggedIn ? '/create' : '/api/auth/signin'}
+          className="btn btn-primary"
+          style={{ width: '48px' }}
+        >
+          <i className="fa-solid fa-plus" />
+        </Link>
         {isLoggedIn && session.user?.image && session.user?.name ? (
           <div className="dropdown dropdown-end">
             <button type="button" className="btn btn-ghost btn-circle avatar">
@@ -41,10 +43,15 @@ const Header = async () => {
               </div>
             </button>
 
-            <ProfileMenu />
+            <ProfileMenu username={session.user.name} />
           </div>
         ) : (
-          <Link href="/api/auth/signin" title="Login" className="btn btn-ghost">
+          <Link
+            href="/api/auth/signin"
+            title="Login"
+            className="btn btn-ghost"
+            style={{ width: '48px' }}
+          >
             <i className="fa-solid fa-right-to-bracket" />
           </Link>
         )}
