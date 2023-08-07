@@ -32,20 +32,34 @@ footer {
 
 /* GLOBAL COMPONENTS ----------------------------------- */
 
-.up-button {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  background-color: #8a8d92;
+.fixed-buttons {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  color: #ffffff;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fixed-button {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 500;
+}
+
+.up-button {
+  background-color: #8a8d92;
+  color: #ffffff;
   scroll-margin-top: 64px;
+}
+
+.theme-button {
+  background-color: #6f97d8;
+  color: #ffffff;
 }
 
 /* UTILITY CLASSES ------------------------------------- */

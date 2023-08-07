@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const UpButton = () => {
   return (
-    <Link href="#main" className="up-button">
+    <Link href="#main" className="fixed-button up-button">
       <i className="fa-solid fa-chevron-up" />
     </Link>
   );

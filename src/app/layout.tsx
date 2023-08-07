@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 
+import ThemeProvider from '@/providers/themeProvider';
+
 import NextAuthSessionProvider from '../providers/sessionProvider';
+import FixedButtons from '@/components/Common/FixedButtons/FixedButtons';
 import Footer from '@/components/Common/Footer';
 import Header from '@/components/Common/Header';
-import UpButton from '@/components/Common/UpButton';
 
 import { titillium } from '@/styles/fonts';
 import '@/styles/globals.css';
@@ -27,15 +29,17 @@ export default function RootLayout({
         defer
       />
       <body className={titillium.className}>
-        <NextAuthSessionProvider>
-          <Header />
-          <main id="main" className="md:pt-6 pb-8 mt-16">
-            {children}
-          </main>
-          <Footer />
+        <ThemeProvider defaultTheme="system" enableSystem>
+          <NextAuthSessionProvider>
+            <Header />
+            <main id="main" className="md:pt-6 pb-8 mt-16">
+              {children}
+            </main>
+            <Footer />
 
-          <UpButton />
-        </NextAuthSessionProvider>
+            <FixedButtons />
+          </NextAuthSessionProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
