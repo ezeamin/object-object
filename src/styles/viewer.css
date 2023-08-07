@@ -70,9 +70,7 @@
 
 /* Link styles */
 .post-content a {
-  text-decoration: underline;
-  color: rgb(106, 221, 230);
-  transition: color 0.1s ease;
+  @apply custom-link;
 }
 
 .post-content a:hover {

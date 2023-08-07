@@ -10,6 +10,7 @@ import Header from '@/components/Common/Header';
 
 import { titillium } from '@/styles/fonts';
 import '@/styles/globals.css';
+import '@/styles/tailwind.css';
 
 export const metadata: Metadata = {
   title: '[object Object]',

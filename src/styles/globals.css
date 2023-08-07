@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* GLOBAL THEMING -------------------------------------------- */
+
+:root {
+  --background: radial-gradient(
+    circle 815px at 26% 0%,
+    rgba(9, 29, 85, 1) 0.2%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+[data-theme='light'] {
+  --background: radial-gradient(
+    circle 815px at 26% 0%,
+    rgb(170, 186, 230) 0.2%,
+    rgb(216, 216, 216) 100%
+  );
+}
+
 /* GENERAL ------------------------------------------------ */
 
 html {
@@ -13,11 +31,7 @@ body {
   display: flex !important;
   flex-direction: column;
   min-height: 100vh;
-  background-image: radial-gradient(
-    circle 815px at 26% 0%,
-    rgba(9, 29, 85, 1) 0.2%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background-image: var(--background);
 }
 
 main {
@@ -68,19 +82,29 @@ footer {
   border-radius: 33% 67% 55% 45% / 30% 47% 53% 70% !important;
 }
 
-.custom-link {
-  text-decoration: underline;
-  color: rgb(106, 221, 230);
-  transition: color 0.1s ease;
-}
+/* Link */
 
-.custom-link:hover {
-  color: rgb(86, 182, 189);
+@layer components {
+  .custom-link {
+    text-decoration: underline;
+    color: rgb(106, 221, 230);
+    transition: color 0.1s ease;
+  }
+
+  .custom-link:hover {
+    color: rgb(86, 182, 189);
+  }
 }
 
 .custom-link-no-underline {
   text-decoration: none !important;
 }
+
+[data-theme='light'] .custom-link {
+  @apply text-primary;
+}
+
+/* finish Link */
 
 .stick-to-top {
   position: sticky !important;
@@ -91,18 +115,4 @@ footer {
   text-wrap: balance;
   font-size: 3rem;
   line-height: 1.25;
-}
-
-/* TAILWIND -------------------------------------------- */
-
-.paddings {
-  @apply lg:px-40 2xl:px-96;
-}
-
-.responsive-paddings {
-  @apply px-5 lg:px-40 2xl:px-96;
-}
-
-.custom-card {
-  @apply card bg-base-100 shadow-xl w-full;
 }
