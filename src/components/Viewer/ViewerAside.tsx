@@ -16,7 +16,7 @@ const ViewerAside = (props: Props) => {
   const user = mockedUser;
 
   return (
-    <aside className="col-span-12 md:col-span-4 flex flex-col gap-3 relative min-h-full">
+    <aside className="col-span-12 md:col-span-4 flex flex-col md:gap-3 relative min-h-full">
       <UserCard user={user} />
       <SeeMoreUser user={user} postId={postId} />
     </aside>

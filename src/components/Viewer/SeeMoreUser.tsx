@@ -15,7 +15,7 @@ const SeeMoreUser = (props: Props) => {
   const posts = user.posts.filter((post) => post.id !== postId).slice(0, 3);
 
   return (
-    <section className="custom-card p-5 stick-to-top">
+    <section className="custom-card p-5 stick-to-top hide-borders-card">
       <h3 className="font-bold text-lg">
         See more of{' '}
         <Link

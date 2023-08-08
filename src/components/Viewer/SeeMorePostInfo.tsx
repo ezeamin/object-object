@@ -12,7 +12,7 @@ const SeeMorePostInfo = (props: Props) => {
   return (
     <Link
       href={`/post/${post.slug}`}
-      className="border border-gray-500 p-3 rounded-lg hover:border-gray-400 hover:text-gray-300 transition-all duration-100"
+      className="border border-gray-500 p-3 rounded-lg hover:border-black hover:text-black dark:hover:border-gray-400 dark:hover:text-gray-300 transition-all duration-100"
     >
       <h4 className="font-bold text-xl">{post.title}</h4>
       <p>

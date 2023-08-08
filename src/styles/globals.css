@@ -10,6 +10,7 @@
     rgba(9, 29, 85, 1) 0.2%,
     rgba(0, 0, 0, 1) 100%
   );
+  --code-background: rgb(58, 58, 70);
 }
 
 [data-theme='light'] {
@@ -18,6 +19,7 @@
     rgb(170, 186, 230) 0.2%,
     rgb(216, 216, 216) 100%
   );
+  --code-background: rgb(216, 216, 216);
 }
 
 /* GENERAL ------------------------------------------------ */
@@ -89,19 +91,23 @@ footer {
     text-decoration: underline;
     color: rgb(106, 221, 230);
     transition: color 0.1s ease;
-  }
 
-  .custom-link:hover {
-    color: rgb(86, 182, 189);
+    &:hover {
+      color: rgb(86, 182, 189);
+    }
+  }
+}
+
+[data-theme='light'] .custom-link {
+  @apply text-primary;
+
+  &:hover {
+    @apply text-primary-focus;
   }
 }
 
 .custom-link-no-underline {
   text-decoration: none !important;
-}
-
-[data-theme='light'] .custom-link {
-  @apply text-primary;
 }
 
 /* finish Link */

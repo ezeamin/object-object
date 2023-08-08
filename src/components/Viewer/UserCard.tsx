@@ -17,7 +17,7 @@ const UserCard = (props: Props) => {
   });
 
   return (
-    <section className="custom-card p-5">
+    <section className="custom-card p-5 pb-0 md:pb-5 hide-borders-card">
       <Link href={`/user/${user.username}`} className="flex gap-2 items-end">
         <figure>
           <Image
@@ -41,6 +41,7 @@ const UserCard = (props: Props) => {
         <h6 className="mt-5 font-bold text-sm">JOINED</h6>
         <p>🕐 {joinedAt}</p>
       </div>
+      <hr className="mt-5 md:hidden" />
     </section>
   );
 };

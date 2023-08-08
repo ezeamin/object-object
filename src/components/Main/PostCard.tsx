@@ -21,7 +21,7 @@ const PostCard = (props: Props) => {
 
   if (index === 0) {
     return (
-      <div className="custom-card md:col-span-2 image-full h-72 border border-transparent hover:shadow-center-blue hover:border hover:border-white/20 transition-all duration-300">
+      <div className="custom-card md:col-span-2 image-full h-72 border border-gray-500 dark:border-transparent hover:shadow-center-blue hover:border hover:border-white/20 transition-all duration-300 text-white dark:text-neutral-content">
         <figure>
           <Image
             src={post.mainImageUrl}

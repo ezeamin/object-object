@@ -5,7 +5,9 @@ export const content = [
   './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
   './src/components/**/*.{js,ts,jsx,tsx,mdx}',
   './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  './src/styles/**/*.css',
 ];
+export const darkMode = ['class', '[data-theme="dark"]'];
 export const theme = {
   extend: {
     backgroundImage: {
