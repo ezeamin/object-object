@@ -1,3 +1,5 @@
+import { User as NextUser, Session } from 'next-auth';
+
 // export interface Post {
 //   id: number;
 //   title: string;
@@ -52,4 +54,13 @@ export interface User {
   updatedAt: Date | null;
   deletedAt: Date | null;
   username: string;
+}
+
+export interface SessionInterface extends Session {
+  user: NextUser & {
+    id: string;
+    name: string;
+    email: string;
+    avatarUrl: string;
+  };
 }

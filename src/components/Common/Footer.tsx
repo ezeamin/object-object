@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="footer py-10 bg-neutral text-neutral-content responsive-paddings">
+    <footer className="footer py-10 bg-base-300/90 dark:bg-neutral text-neutral dark:text-neutral-content responsive-paddings">
       <div>
         <Image src="/logo.png" alt="Js logo" width={50} height={50} />
         <p>
