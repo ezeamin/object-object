@@ -1,16 +1,12 @@
 import type { Metadata } from 'next';
-import { Titillium_Web } from 'next/font/google';
 import Script from 'next/script';
 
-import './globals.css';
 import Footer from '@/components/Common/Footer';
 import Header from '@/components/Common/Header';
+import UpButton from '@/components/Common/UpButton';
 
-const titillium = Titillium_Web({
-  weight: '400',
-  style: 'normal',
-  subsets: ['latin'],
-});
+import { titillium } from '@/styles/fonts';
+import '@/styles/globals.css';
 
 export const metadata: Metadata = {
   title: '[object Object]',
@@ -31,8 +27,12 @@ export default function RootLayout({
       />
       <body className={titillium.className}>
         <Header />
-        <main className="py-8 responsive-paddings mt-16">{children}</main>
+        <main id="main" className="md:pt-6 pb-8 mt-16">
+          {children}
+        </main>
         <Footer />
+
+        <UpButton />
       </body>
     </html>
   );
