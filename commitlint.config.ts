@@ -15,6 +15,7 @@ module.exports = {
         'style',
         'test',
         'merge',
+        'chore',
       ],
     ],
     'header-min-length': [2, 'always', 10],
